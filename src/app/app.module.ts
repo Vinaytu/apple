@@ -49,7 +49,7 @@ import { UserDeactivateGuard } from './guards/user-deactivate.guard';
     
 
   ],
-  providers: [AdminPermissionGuard,UserDeactivateGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
