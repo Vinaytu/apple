@@ -1,0 +1,53 @@
+#vinaycolor{
+    
+    padding: 50px;
+    border-radius:200px;
+    width:150px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight:200;
+    background-color: bisque;
+    color: rgb(254, 127, 0);
+}
+table tr th{
+    padding: 10px;
+    padding-right: 50px;
+    
+}
+table tr td{
+    padding: 10px;
+    
+    
+}
+table tr:hover{
+    background-color: gray;
+}
+table{
+    margin-top: 10px;
+    margin-bottom:200px;
+    margin-left: 150px;
+}
+input{
+    margin-left:2px;  
+}
+label{
+    margin-left:50px;
+}
+.Deletebutton{
+    background-color:rgb(236, 94, 94);
+    color: aliceblue;
+    padding:5px;
+    text-decoration: none;
+    border-radius:10px;
+
+}
+.Deletebutton:hover{
+    cursor:pointer;
+    color: rgb(238, 198, 139);
+    background-color: blueviolet;
+}
+.Tableheading{
+    background-color: aqua;
+    font-style: italic;
+    color: darkblue;
+}

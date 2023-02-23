@@ -1,0 +1,39 @@
+<div>
+  <div class="container m-5 px-3">
+    <h2>Button Styles</h2>
+    <button type="button" class="btn px-3">Basic</button>
+    <button type="button" class="btn btn-primary px-3  mx-4">Primary</button>
+    <button type="button" class="btn btn-secondary px-3  mx-4">Secondary</button>
+    <button type="button" class="btn btn-success px-3  mx-4">Success</button>
+    <button type="button" class="btn btn-info  px-3  mx-4">Info</button>
+    <button type="button" class="btn btn-warning  px-3  mx-4">Warning</button>
+    <button type="button" class="btn btn-danger  px-3  mx-4">Danger</button>
+    <button type="button" class="btn btn-dark  px-3  mx-4">Dark</button>
+    <button type="button" class="btn btn-light  px-3 mx-4">Light</button>
+    <button type="button" class="btn btn-link  px-3  mx-4">Link</button>
+  </div>
+
+  <div>
+    <p>Shared Service Msg: <strong>{{sharedmsg}}</strong> </p>
+  </div>
+
+
+  <div>
+    <h1>No of clicks {{clicksCount.count}}</h1>
+    <button (click)="handleClick()">Click me</button>
+  </div><br><br>
+
+  <div class="mx-3">
+    Positive Numbers Only:<input type="text" appPositiveNum><br><br>
+    Odd And Even Number:<input type="text" appPositiveNum [(ngModel)]="num1"><br>
+    <strong (keyup)="oddeven()" class=" keyup">{{num1}} {{oddeven()}}</strong><br>
+
+  </div>
+
+  <hr>
+    <div>
+      Input given value:<input type="text" [(ngModel)]="num" ><br>
+      <p class="invalied pipemargin">{{num | pipe:num}}</p>
+    </div>
+
+</div>

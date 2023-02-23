@@ -1,0 +1,121 @@
+    <h1>Reactive Form</h1><br>
+<div>
+    <Div class="body card w-50 mx-auto mt-4">
+        <h4 class="card-header text-center">Register</h4>
+        <div class="card-body">
+            <form [formGroup]=" regForm">
+                <div class="form-group">
+                    <label for="">User Name:</label>
+                    <input type="text" class="form-control" formControlName="uname">
+                        <div *ngIf="regForm.controls['uname'].touched && regForm.controls['uname']?.['errors'] " class="invalied" >
+                            <div *ngIf="regForm.controls['uname']?.['errors']?.['required']">
+                                User Name is requried
+                            </div>
+                            <div *ngIf="regForm.controls['uname']?.['errors']?.['minlength']">
+                                Minimum Charactor is 4 Requried
+                            </div>
+
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" formControlName="email">
+                        <div *ngIf="regForm.controls['email'].touched && regForm.controls['email']?.['errors'] " class="invalied" >
+                            <div *ngIf="regForm.controls['email']?.['errors']?.['required']">
+                                Email is requried
+                            </div>
+                            <div *ngIf="regForm.controls['email']?.['errors']?.['email']">
+                                Enter Volid Email
+                            </div>
+    
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Password:</label>
+                    <input type="new-password" class="form-control" formControlName="password">
+                        <div *ngIf="regForm.controls['password'].touched && regForm.controls['password']?.['errors'] " class="invalied" >
+                            <div *ngIf="regForm.controls['password']?.['errors']?.['required']">
+                                Password is requried
+                            </div>
+                            <div *ngIf="regForm.controls['password']?.['errors']?.['minlength']">
+                                Minimum 8 Charactore requried
+                            </div>
+    
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Conform Password:</label>
+                    <input type="new-password" class="form-control" formControlName="cpassword">
+                        <div *ngIf="regForm.controls['cpassword'].touched && regForm.controls['cpassword']?.['errors'] " class="invalied" >
+                            <div *ngIf="regForm.controls['cpassword']?.['errors']?.['required']">
+                                Conform Password is requried
+                            </div>
+                        </div>
+                            <div *ngIf="regForm['errors']?.['passwordMatch']"class="invalied">
+                            Password Not Matched
+                            </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Age:</label>
+                    <input type="text" class="form-control" formControlName="age"appPositiveNum>
+                        <div *ngIf="regForm.controls['age'].touched && regForm.controls['age']?.['errors'] " class="invalied" >
+                            <div *ngIf="regForm.controls['age']?.['errors']?.['required']"appPositiveNum>
+                                User Age is requried
+                            </div>
+                            
+
+                        </div>
+                </div>
+                <input type="checkbox"class="checkbox" formControlName="admin">Agree
+                <br><br><button class="btn btn-primary" (click)="show()" [disabled]="regForm.invalid">Submit</button>
+            </form>
+        </div>
+    </Div>
+</div>
+<!-- ---------------------------------------------------------------------------------- -->
+
+
+<hr><br><br>
+<div class="body1">
+    <h1>Templet Drive Form</h1>
+    <div class="row ">
+        <div class="col-5">
+            <form #createAccountForm="ngForm" (ngSubmit)="createAccount(createAccountForm)" >
+                <div class="form-group mb-1 ">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter First Nmae" #fname="ngModel" ngModel required>
+                    <span class="invalied" *ngIf="(fname.touched ) && fname.errors?.['required']">First Name Required</span>
+
+                </div>
+                <div class="form-group mb-1">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Last Nmae"  #lname="ngModel" ngModel required>
+                    <span class="invalied" *ngIf="(lname.touched ) && lname.errors?.['required']">Last Name Required</span>
+                </div>
+                <div class="form-group mb-1">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address"  #email="ngModel" ngModel required>
+                    <span class="invalied" *ngIf="(email.touched ) && email.errors?.['required']">Email Required</span>
+
+                </div>
+                <div class="form-group mb-1" class="">
+                    <label for="password">Password</label>
+                    <input type="new-password" class="form-control" id="password" name="password" placeholder="Enter Password"  #password="ngModel" ngModel minlength="8" maxlength="12" [pattern]="passwordPtn" required>
+                    <span class="invalied" *ngIf="(password.touched ) && password.errors?.['required']">Password Required</span>
+                    <span class="invalied" *ngIf="(password.touched ) && password.errors?.['pattern']">Password must be 8-12 Characters and should contain letter,numbers, special Characters and capital letters. </span>
+
+
+                </div>
+                
+                <button class="btn btn-primary mt-3">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<div>
+    
+</div>
+</div>

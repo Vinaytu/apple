@@ -1,0 +1,17 @@
+div{
+    background-color:rgb(101, 95, 95);
+    margin-top:3px;
+    text-align:left;
+    margin-left:45%;
+    word-spacing:20px;
+    padding: 5px;
+    display:inline-block;
+    
+}
+a{
+    color:rgb(242, 147, 147);
+    text-decoration: none;
+    font-size: x-large;
+    padding-right:20px;
+    
+}

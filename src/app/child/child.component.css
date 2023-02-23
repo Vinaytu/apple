@@ -1,0 +1,13 @@
+.child{
+    border: 1px solid gray;
+    margin: 20px;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    background-color: rgb(99, 51, 0);
+}
+h3{
+    text-align: center;
+    color: white;
+}

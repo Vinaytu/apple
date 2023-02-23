@@ -1,0 +1,13 @@
+.parent{
+    border: 1px solid gray;
+    margin: 20px;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color:rgb(92, 92, 137);
+    color: rgb(255, 255, 255);
+}
+h3{
+    text-align: center;
+    color:rgb(255, 255, 255);
+}

@@ -1,0 +1,29 @@
+<!-- <div class="parent">
+    <h2>Parent Component</h2>
+    <ul>
+        <li *ngFor="let item of items">{{item}}</li>
+      </ul>
+    <app-child [item]="currentItem" (newItemEvent)="addItem($event)"></app-child>
+
+</div> -->
+
+
+<div class="parent">
+  <div>
+    <h3>This Is Parent Component</h3><br>
+    <p>Message Received From Child Comonent:<strong>{{ReciveChildMag}}</strong></p>
+  </div>
+  
+  <div>
+    <p>Shared Service Msg: <strong>{{sharedmsg}}</strong> </p>
+    <button (click)="changeservicemsg()">Change Message</button>
+  </div>
+
+  <div>
+    <h1>No of clicks {{clicksCount.count}}</h1>
+    <button (click)="handleClick()">Click me</button>
+  </div>
+
+
+  <app-child [receiveParentMessage]="message" (messageEmitter)="ReciveChildMsg($event)"></app-child>
+</div>

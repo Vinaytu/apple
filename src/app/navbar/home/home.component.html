@@ -1,0 +1,65 @@
+<div class="mb-3">
+    <button class="btn btn-primary m-2" (click)="dummylogin()">login</button>
+    <button class="btn btn-danger m-2" (click)="dummylogout()">logout</button>
+
+</div>
+
+
+
+
+
+<div class="mx-5">
+    <h1>Color Picker</h1>
+    
+    <div [style.background]="clr" id="vinaycolor"></div><br>  
+</div>
+<br><hr>
+<div>
+    
+</div>
+<div class="mx-5">
+    <label for="">Date Picker : </label>
+    <input type="date"/><br><br>
+</div>
+ <hr>
+<!-- <div class="mx-5">
+    <button class="btn btn-danger" (click)="counter('add')">Increment</button><br>
+    <h1>Count : {{count}}</h1><br>
+    <button class="btn btn-danger" (click)="counter('minus')">Decrement</button>
+</div> -->
+<div class="row mt-3 mx-5">
+    <div>
+        <label for="">Name:</label> <input type="text" [(ngModel)]="names">
+        <label for="">Employee ID :</label><input type="text" [(ngModel)]="id">
+        <label for="">Salary:</label><input type="text" [(ngModel)]="salr">
+        <button class="btn btn-sm btn-primary" (click)="addUser()">Add User</button>
+        <button class="btn btn-sm btn-secondary" (click)="refresh()">Refresh Employee Details</button>
+
+        <table >
+            
+
+            Odd Row: <input type="color" [(ngModel)]="odd1" placeholder="Color"><br>
+            Even Row:<input type="color" [(ngModel)]="even1" placeholder="Color" ><br>
+            <tr class="Tableheading">
+                <th>Slno</th>
+                <th>Name</th>
+                <th>Emp.ID</th>
+                <th>Salary</th>
+                <th>Delete</th>
+            </tr>
+        
+            <tr *ngFor="let u of userlist; let i =index ;let odd=odd; let even=even" [ngStyle]="{ background: odd ? this.odd1 : this.even1}">
+                <td>{{i+1}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.empId}}</td>
+                <td>{{u.salary}}</td>
+            
+                <td><a class="Deletebutton" (click)="deleteUser(i)">Delete</a></td>
+            </tr>
+ 
+        </table>
+    </div>
+
+</div>
+<input type="color" [(ngModel)]="clr">
+<app-reactive></app-reactive>
