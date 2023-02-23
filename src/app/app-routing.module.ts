@@ -17,7 +17,7 @@ const routes: Routes = [
     path:'', component:HomeComponent
   },
   {
-    path:'home', component:HomeComponent,canDeactivate:[UserDeactivateGuard]
+    path:'home', component:HomeComponent
   },
 
   {
@@ -25,13 +25,11 @@ const routes: Routes = [
   },
 
   {
-    path: 'contact', component:ContactComponent,canDeactivate:[UserDeactivateGuard]
+    path: 'contact', component:ContactComponent
   },
 
   {
     path: 'authentication', component:AuthenticationComponent,
-
-    canActivate:[AdminPermissionGuard],canDeactivate:[UserDeactivateGuard],
   
 
     children: [
